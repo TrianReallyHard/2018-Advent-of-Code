@@ -1,17 +1,41 @@
-# 2018-Advent-of-Code
+# 2018 Advent of Code Challenge
+
+Solutions by the Knights of Academia to the 2018 Advent of Code Challenge.
+
+
+## About Advent of Code
+
+Advent of Code is a series of small programming puzzles by Eric Wastl for a variety of skill sets and skill levels in any programming language you like.  Problems are released nightly between December 1 and 25, 2018 (midnight EST/UTC-5).
 
 https://adventofcode.com/
 
-Join `<3+n`, KOA's premier computer science clan, in performing some fun and casual programming practice! Please see the challenge  [website](https://adventofcode.com/) for information regarding the problems.
 
-## Informational Highlights
-+ **ANY** language
-+ Timezone for question release is EST/UTC-5
-+ What's the website? https://adventofcode.com/
+## About Knights of Academia (KOA)
 
-## How to use this repo:
-1. Clone it
-2. Make a folder for each day: `day-1/`
-3. Write your solution in any langauage you would like
-  + If using multiple languages then your folder stucture should look something like `day-1/python/` and `day-1/js`.
-4. Submit a pull request with your changes. No changes will be accepted, but we'll be able to see each person's contributions.
+KOA is an educational organization devoted to helping individuals actively become their greatest versions of themselves through the development of self discipline and through the fostering of critical thinking.
+
+Learn more at https://knightsofacademia.com/
+
+This repo of solutions is hosted by `<3+n`, KOA's computer science clan on Habitica.  Habitica is an open source productivity app that applies gamification principles to your real-life habits and goals.  Visit the [Knights of Academia Guild on Habitica](https://habitica.com/groups/guild/e184b286-b369-46c9-ab55-054c3368af33) to participate in our Habitica challenge and a chance to win the in-game reward.
+
+
+## Participation
+
+Assumes you have:
+
+* Joined [Knights of Academia Guild on Habitica](https://habitica.com/groups/guild/e184b286-b369-46c9-ab55-054c3368af33)
+* Elected to participate in the challenge
+* Create a GitHub account
+
+Once you've done that,
+
+1. Fork this repo into your own account
+2. Make a folder with your Habitica display name and the language you will implement in.  For example, `NeuralKnight-JavaScript`
+3. Do whatever setup you want in that folder.  Treat it like your project root.  For example, a JavaScript project might run `npm init` and exclude node_modules in a .gitignore file.  A README.md would be helpful for other people to run your code
+4. Create a folder for each day of the challenge: `day-1/`
+5. Submit a pull request with your changes and we'll add it to the community repo
+
+
+## Disclaimer
+
+The Advent of Code challenge is by Eric Wastl who is not affiliated with KOA.  Within the Habitica platform, KOA has also created an "challenge" on the Habitica platform (with an in-game reward) for members to participate in the Advent of Code challenge.  Understanding which challenge the word "challenge" refers to is challenging.  We regret the confusion.
