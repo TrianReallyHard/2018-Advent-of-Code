@@ -16,16 +16,16 @@ KOA is an educational organization devoted to helping individuals actively becom
 
 Learn more at https://knightsofacademia.com/
 
-This repo of solutions is hosted by `<3+n`, KOA's computer science clan on Habitica.  Habitica is an open source productivity app that applies gamification principles to your real-life habits and goals.  Visit the [Knights of Academia Guild on Habitica](https://habitica.com/groups/guild/e184b286-b369-46c9-ab55-054c3368af33) to participate in our Habitica challenge and a chance to win the in-game reward.
+This repo of solutions is hosted by `<3+n`, KOA's computer science clan on Habitica.  Habitica is an open source productivity platform that applies gamification principles to your real-life habits and goals.  Visit the [Knights of Academia Guild on Habitica](https://habitica.com/groups/guild/e184b286-b369-46c9-ab55-054c3368af33) to participate in our Habitica challenges and a chance to win in-game rewards.
 
 
 ## Participation
 
 Assumes you have:
 
-* Joined [Knights of Academia Guild on Habitica](https://habitica.com/groups/guild/e184b286-b369-46c9-ab55-054c3368af33)
+* Joined the [Knights of Academia Guild on Habitica](https://habitica.com/groups/guild/e184b286-b369-46c9-ab55-054c3368af33)
 * Elected to participate in the challenge
-* Create a GitHub account
+* Created a GitHub account
 
 Once you've done that,
 
@@ -33,9 +33,9 @@ Once you've done that,
 2. Make a folder with your Habitica display name and the language you will implement in.  For example, `NeuralKnight-JavaScript`
 3. Do whatever setup you want in that folder.  Treat it like your project root.  For example, a JavaScript project might run `npm init` and exclude node_modules in a .gitignore file.  A README.md would be helpful for other people to run your code
 4. Create a folder for each day of the challenge: `day-1/`
-5. Submit a pull request with your changes and we'll add it to the community repo
+5. Submit a pull request with your solutions to the day's problems plus any changes to your project root and we'll add it to the community repo
 
 
 ## Disclaimer
 
-The Advent of Code challenge is by Eric Wastl who is not affiliated with KOA.  Within the Habitica platform, KOA has also created an "challenge" on the Habitica platform (with an in-game reward) for members to participate in the Advent of Code challenge.  Understanding which challenge the word "challenge" refers to is challenging.  We regret the confusion.
+The Advent of Code challenge is by Eric Wastl who is not affiliated with KOA.  Within the Habitica platform, KOA has also created a "challenge" (with an in-game reward) for members to participate in the Advent of Code challenge.  Understanding which challenge the word "challenge" refers to is challenging.  We regret the confusion.
