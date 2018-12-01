@@ -9,21 +9,10 @@ Advent of Code is a series of small programming puzzles by Eric Wastl for a vari
 
 https://adventofcode.com/
 
-
-## About Knights of Academia (KOA)
-
-KOA is an educational organization devoted to helping individuals actively become their greatest versions of themselves through the development of self discipline and through the fostering of critical thinking.
-
-Learn more at https://knightsofacademia.com/
-
-This repo of solutions is hosted by `<3+n`, KOA's computer science clan on Habitica.  Habitica is an open source productivity platform that applies gamification principles to your real-life habits and goals.  Visit the [Knights of Academia Guild on Habitica](https://habitica.com/groups/guild/e184b286-b369-46c9-ab55-054c3368af33) to participate in our Habitica challenges and a chance to win in-game rewards.
-
-
 ## Participation
 
 Assumes you have:
 
-* Joined the [Knights of Academia Guild on Habitica](https://habitica.com/groups/guild/e184b286-b369-46c9-ab55-054c3368af33)
 * Elected to participate in the challenge
 * Created a GitHub account
 
