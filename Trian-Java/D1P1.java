@@ -5,7 +5,7 @@ class D1P1 {
 
     public static void main(String[] args) {
         try {
-            BufferedReader reader = new BufferedReader(new FileReader("input.txt"));
+            BufferedReader reader = new BufferedReader(new FileReader("test.txt"));
             int lines = 0;
             int total = 0;
             do {
