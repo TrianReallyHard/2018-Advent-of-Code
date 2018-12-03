@@ -1,0 +1,10 @@
+{
+  "name": "adventofcode-2018-nullfame",
+  "version": "0.1.0",
+  "description": "Solutions to the 2018 Advent of Code Challenge",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adam Finlayson",
+  "license": "UNLICENSED"
+}
