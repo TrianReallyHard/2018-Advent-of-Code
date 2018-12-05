@@ -27,4 +27,4 @@ Once you've done that,
 
 ## Disclaimer
 
-The Advent of Code challenge is by Eric Wastl who is not affiliated with KOA.  Within the Habitica platform, KOA has also created a "challenge" (with an in-game reward) for members to participate in the Advent of Code challenge.  Understanding which challenge the word "challenge" refers to is challenging.  We regret the confusion.
+The Advent of Code challenge is by Eric Wastl who isn't associated with this repo.
