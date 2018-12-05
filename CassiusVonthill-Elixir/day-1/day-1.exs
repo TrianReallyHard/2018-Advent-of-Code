@@ -10,25 +10,11 @@ defmodule Day1 do
     # |> IO.inspect(label: "Parsed Data")
     |> Stream.cycle()
     # |> IO.inspect(label: "Cycle data")
-    |> set_handler()
-    |> elem(0)
-  end
-
-  def parse_input(string_input) do
-    Regex.scan(~r/[+-]\d+/, string_input)
-    |> List.flatten()
-    # |> IO.inspect(label: "Flattened data")
-    |> Enum.map(&String.to_integer(&1))
-    # |> IO.inspect(label: "Numerical data")
-  end
-
-  def set_handler(s) do # Rather slow and inefficient. Lots of looping
-
-    Enum.reduce_while(s, {0, MapSet.new([0])}, fn x, {base, ms} -> 
+    |> Enum.reduce_while({0, MapSet.new([0])}, fn x, {base, ms} -> 
       base =
         base
         |> Kernel.+(x)
-        |> IO.inspect(label: "Base")
+        # |> IO.inspect(label: "Base")
 
       if MapSet.member?(ms, base) do
         # IO.puts("true")
@@ -41,6 +27,15 @@ defmodule Day1 do
         {:cont, {base, ms}}
       end
     end)
+    |> elem(0)
+  end
+
+  def parse_input(string_input) do
+    Regex.scan(~r/[+-]\d+/, string_input)
+    |> List.flatten()
+    # |> IO.inspect(label: "Flattened data")
+    |> Enum.map(&String.to_integer(&1))
+    # |> IO.inspect(label: "Numerical data")
   end
 
 end
