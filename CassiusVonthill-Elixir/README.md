@@ -7,7 +7,9 @@ To ease the running and playing with the code I recommend using a docker image. 
 `docker run -it --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp elixir:1.7.4-alpine elixir day-1_test.exs`
 
 You could also create an alias in your shell (bash):
+
 `alias elixir=docker run -it --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp elixir:1.7.4-alpine elixir`
 
 To make the alias permanent:
+
 `{Alias you want} > .bashrc`
