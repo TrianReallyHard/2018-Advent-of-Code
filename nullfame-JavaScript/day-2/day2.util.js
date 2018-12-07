@@ -1,3 +1,23 @@
+export const warehouseBoxIdComparator = boxes => {
+  let answer = null;
+
+  boxes.forEach((box, i) => {
+    const boxChars = box.split("");
+    const compareToBoxes = boxes.slice(i + 1);
+
+    compareToBoxes.forEach(subject => {
+      let matches = "";
+      boxChars.forEach((char, j) => {
+        if (char === subject.charAt(j)) matches += char;
+      });
+
+      if (matches.length === box.length - 1) answer = matches;
+    });
+  });
+
+  return answer; // Test expects "fgij"
+};
+
 export const warehouseBoxRudimentaryChecksummer = boxes => {
   // Track how many boxes have a letter with exactly that many counts
   // e.g., boxesWithLetterCounts[1] = 2; // means 2 boxes have exactly 1 letter
