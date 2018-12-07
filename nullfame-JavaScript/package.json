@@ -4,18 +4,23 @@
   "description": "Solutions to the 2018 Advent of Code Challenge",
   "scripts": {
     "day-1": "node ./day-1/index.js",
+    "day-2": "babel-node ./day-2/index.js",
     "lint": "eslint '**/*.{js,jsx,vue}'; exit 0",
     "format": "eslint '**/*.{js,jsx,vue}' --fix; exit 0",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "Adam Finlayson",
   "license": "UNLICENSED",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "eslint": "^5.9.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^3.3.0",
     "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^22.1.2",
     "eslint-plugin-prettier": "^3.0.0",
+    "jest": "^23.6.0",
     "prettier": "^1.15.3"
   }
 }
