@@ -1,6 +1,6 @@
-import checksummer from "./WarehouseBoxRudimentaryChecksummer";
+import { warehouseBoxRudimentaryChecksummer } from "./day2.util";
 
-const boxes = [
+const boxesToChecksum = [
   "abcdef",
   "bababc",
   "abbcde",
@@ -11,5 +11,5 @@ const boxes = [
 ];
 
 test("Day 2, Part 1", () => {
-  expect(checksummer(boxes)).toBe(12);
+  expect(warehouseBoxRudimentaryChecksummer(boxesToChecksum)).toBe(12);
 });

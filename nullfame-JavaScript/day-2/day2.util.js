@@ -1,4 +1,4 @@
-export default boxes => {
+export const warehouseBoxRudimentaryChecksummer = boxes => {
   // Track how many boxes have a letter with exactly that many counts
   // e.g., boxesWithLetterCounts[1] = 2; // means 2 boxes have exactly 1 letter
   const boxesWithLetterCounts = {};
