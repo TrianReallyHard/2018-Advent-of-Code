@@ -1,6 +1,6 @@
 # 2018 Advent of Code Challenge
 
-Solutions by the Knights of Academia to the 2018 Advent of Code Challenge.
+Solutions by the `<3+N` coders to the 2018 Advent of Code Challenge.
 
 
 ## About Advent of Code
@@ -13,7 +13,7 @@ https://adventofcode.com/
 
 Assumes you have:
 
-* Elected to participate in the challenge
+* Elected to participate in the `<3+N` challenge on Habitica
 * Created a GitHub account
 
 Once you've done that,
@@ -27,4 +27,4 @@ Once you've done that,
 
 ## Disclaimer
 
-The Advent of Code challenge is by Eric Wastl who isn't associated with this repo.
+The Advent of Code challenge is by Eric Wastl who is not affiliated with `<3+N`.  Within the Habitica platform, `<3+N` has also created a "challenge" (with an in-game reward) for members to participate in the Advent of Code challenge.  Understanding which challenge the word "challenge" refers to is challenging.  We regret the confusion.
