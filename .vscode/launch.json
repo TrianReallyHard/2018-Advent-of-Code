@@ -23,6 +23,16 @@
             "stopOnEntry": false,
             "mainClass": "D1P2",
             "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-D2P1",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/Trian-Java",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "D2P1",
+            "args": ""
         }
     ]
 }
