@@ -4,26 +4,25 @@ import java.io.FileReader;
 class D1P1 {
 
     public static void main(String[] args) {
+        int number = findFirst();
+        System.out.println(number);
+    }
+
+    public static int findFirst(){
+        int total = 0;
         try {
-            BufferedReader reader = new BufferedReader(new FileReader("test.txt"));
-            int lines = 0;
-            int total = 0;
-            do {
-                String line = reader.readLine();
-                String operand = line.replaceAll("[0-9]*$", "");
-                String value = line.replaceAll("[-+*/]", "");
-                if(operand.equals("+")){
-                    total += Integer.parseInt(value);
-                }
-                if(operand.equals("-")){
-                    total -= Integer.parseInt(value);
-                }
-                lines++;
-            } while (lines < 967);
-            System.out.println(total);
-            reader.close();
+            File file = new File("input.txt");
+            Scanner scan = new Scanner(file);
+            int[] array = new int[10000];
+            array[0] = 0;
+            while (scan.hasNextLine()) {
+                String line = scan.nextLine();
+                total += Integer.parseInt(line);
+            }
+            scan.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return total;
     }
 }

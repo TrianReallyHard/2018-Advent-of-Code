@@ -9,20 +9,20 @@ class D1P2 {
     }
 
     public static int findSecond(){
-        File file = new File("input.txt");
-        Scanner scan = new Scanner(file);
-        int lines = 0;
         int total = 0;
-        int[] array = new int[10000];
-        array[0] = 0;
-        do {
-            if(scan.hasNextLine()){
+        try {
+            File file = new File("input.txt");
+            Scanner scan = new Scanner(file);
+            int[] array = new int[10000];
+            array[0] = 0;
+            while (scan.hasNextLine()) {
                 String line = scan.nextLine();
                 total += Integer.parseInt(line);
-                lines++;
             }
-        } while (lines < 967);
-        scan.close();
-        return 0;
+            scan.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return total;
     }
 }
