@@ -31,9 +31,8 @@ defmodule Day1 do
   end
 
   def parse_input(string_input) do
-    Regex.scan(~r/[+-]\d+/, string_input)
-    |> List.flatten()
-    # |> IO.inspect(label: "Flattened data")
+    string_input
+    |> String.split(", ")
     |> Enum.map(&String.to_integer(&1))
     # |> IO.inspect(label: "Numerical data")
   end
