@@ -24,5 +24,6 @@ class D1P1 {
             e.printStackTrace();
         }
         return total;
+
     }
 }
