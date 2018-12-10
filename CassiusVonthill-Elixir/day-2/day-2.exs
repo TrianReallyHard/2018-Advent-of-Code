@@ -20,6 +20,22 @@ defmodule Day2 do
     end)
   end
 
-  # Map.update(%{a: 3}, String.to_atom("a"), 1, &(&1 + 1))
+  @spec n_event(String.t(), integer) :: boolean
+  def n_event(string_input, n_times) do
+    string_input
+    |> count_letters
+    |> Map.values()
+    |> Enum.find_value(false, &(&1 == n_times))
+  end
+
+  @spec double_event(String.t()) :: boolean
+  def double_event(string_input) do
+    string_input |> n_event(2)
+  end
+
+  @spec double_event(String.t()) :: boolean
+  def triple_event(string_input) do
+    string_input |> n_event(3)
+  end
 
 end
