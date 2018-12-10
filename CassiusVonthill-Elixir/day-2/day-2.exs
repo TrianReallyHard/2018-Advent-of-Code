@@ -1,14 +1,8 @@
 defmodule Day2 do
 
   def part1(input) do
-    input =
-      input
-      |> Enum.map(fn x -> {x, double_event(x), triple_event(x)} end)
-
-    twos = input |> Enum.count(fn {_x, y, _z} -> y end)
-
-    threes = input |> Enum.count(fn {_x, _y, z} -> z end)
-
+    twos = input |> Enum.count(fn x -> double_event(x) end)
+    threes = input |> Enum.count(fn x -> triple_event(x) end)
     twos * threes
   end
 
