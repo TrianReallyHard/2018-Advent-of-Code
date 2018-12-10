@@ -6,7 +6,7 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Debug (Launch)-D1P1",
+            "name": "D1P1",
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "console": "internalConsole",
@@ -16,7 +16,7 @@
         },
         {
             "type": "java",
-            "name": "Debug (Launch)-D1P2",
+            "name": "D1P2",
             "request": "launch",
             "cwd": "${workspaceFolder}/Trian-Java",
             "console": "internalConsole",
@@ -26,12 +26,22 @@
         },
         {
             "type": "java",
-            "name": "Debug (Launch)-D2P1",
+            "name": "D2P1",
             "request": "launch",
             "cwd": "${workspaceFolder}/Trian-Java",
             "console": "internalConsole",
             "stopOnEntry": false,
             "mainClass": "D2P1",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "D2P2",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/Trian-Java",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "D2P2",
             "args": ""
         }
     ]
