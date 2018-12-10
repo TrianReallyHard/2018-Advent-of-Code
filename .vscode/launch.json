@@ -6,16 +6,6 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Debug (Launch)",
-            "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "console": "internalConsole",
-            "stopOnEntry": false,
-            "mainClass": "",
-            "args": ""
-        },
-        {
-            "type": "java",
             "name": "D1P1",
             "request": "launch",
             "cwd": "${workspaceFolder}/Trian-Java/D1",
