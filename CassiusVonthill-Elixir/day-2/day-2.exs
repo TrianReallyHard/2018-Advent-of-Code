@@ -1,7 +1,16 @@
 defmodule Day2 do
 
-  # def part1(file_name) do
-  # end
+  def part1(input) do
+    input =
+      input
+      |> Enum.map(fn x -> {x, double_event(x), triple_event(x)} end)
+
+    twos = input |> Enum.count(fn {_x, y, _z} -> y end)
+
+    threes = input |> Enum.count(fn {_x, _y, z} -> z end)
+
+    twos * threes
+  end
 
   # def part2(file_name) do
   # end
@@ -23,7 +32,7 @@ defmodule Day2 do
   @spec n_event(String.t(), integer) :: boolean
   def n_event(string_input, n_times) do
     string_input
-    |> count_letters
+    |> count_letters()
     |> Map.values()
     |> Enum.find_value(false, &(&1 == n_times))
   end
