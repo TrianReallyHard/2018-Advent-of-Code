@@ -2,13 +2,10 @@ defmodule Day2 do
 
   @spec part1([]) :: integer
   def part1(input) do
-    twos = input |> Enum.count(fn x -> double_event(x) end)
-    threes = input |> Enum.count(fn x -> triple_event(x) end)
+    twos = Enum.count(input, fn x -> double_event?(x) end)
+    threes = Enum.count(input, fn x -> triple_event?(x) end)
     twos * threes
   end
-
-  # def part2(file_name) do
-  # end
 
   def load_inputs(file_name) do
     File.read!(file_name) |> String.split("\n", trim: true)
@@ -23,22 +20,33 @@ defmodule Day2 do
     end)
   end
 
-  @spec n_event(String.t(), integer) :: boolean
-  def n_event(string_input, n_times) do
+  @spec n_event?(String.t(), integer) :: boolean
+  def n_event?(string_input, n_times) do
     string_input
     |> count_letters()
     |> Map.values()
-    |> Enum.find_value(false, &(&1 == n_times))
+    |> Enum.any?(&(&1 == n_times))
   end
 
-  @spec double_event(String.t()) :: boolean
-  def double_event(string_input) do
-    string_input |> n_event(2)
+  @spec double_event?(String.t()) :: boolean
+  def double_event?(string_input) do
+    string_input |> n_event?(2)
   end
 
-  @spec double_event(String.t()) :: boolean
-  def triple_event(string_input) do
-    string_input |> n_event(3)
+  @spec triple_event?(String.t()) :: boolean
+  def triple_event?(string_input) do
+    string_input |> n_event?(3)
+  end
+
+  # @spec part2([]) :: {String.t(), String.t()}
+  # def part2(input) do
+
+  # end
+
+  def one_mismatch?(base_list, test_list) do
+    Enum.zip(base_list, test_list)
+    |> Enum.count(fn {x, y} -> x != y end)
+    |> (fn x -> x == 1 end).()
   end
 
 end
