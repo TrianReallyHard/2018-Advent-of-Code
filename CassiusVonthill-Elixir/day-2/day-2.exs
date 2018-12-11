@@ -1,5 +1,6 @@
 defmodule Day2 do
 
+  @spec part1([]) :: integer
   def part1(input) do
     twos = input |> Enum.count(fn x -> double_event(x) end)
     threes = input |> Enum.count(fn x -> triple_event(x) end)
@@ -10,12 +11,11 @@ defmodule Day2 do
   # end
 
   def load_inputs(file_name) do
-    File.read!(file_name)
-    |> String.split("\n", trim: true)
+    File.read!(file_name) |> String.split("\n", trim: true)
   end
 
   @spec count_letters(String.t()) :: %{}
-  def count_letters(string_input) do
+  defp count_letters(string_input) do
     string_input
     |> String.split("", trim: true)
     |> Enum.reduce(%{}, fn x, acc ->

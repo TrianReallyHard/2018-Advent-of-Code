@@ -1,0 +1,35 @@
+Code.load_file("day-2.exs", __DIR__)
+
+ExUnit.start()
+ExUnit.configure(exclude: :pending, trace: true)
+
+defmodule Day1Test do
+  use ExUnit.Case
+
+  def event_tuple(tuple_input, index) do
+    string_input = tuple_input |> elem(index)
+    {Day2.double_event(string_input), Day2.triple_event(string_input)}
+  end
+
+  test "Part 1 examples" do
+    test_inputs = Day2.load_inputs("test-input.txt") |> List.to_tuple()
+
+    assert event_tuple(test_inputs, 0) == {false, false}
+    assert event_tuple(test_inputs, 1) == {true, true}
+    assert event_tuple(test_inputs, 2) == {true, false}
+    assert event_tuple(test_inputs, 3) == {false, true}
+    assert event_tuple(test_inputs, 4) == {true, false}
+    assert event_tuple(test_inputs, 5) == {true, false}
+    assert event_tuple(test_inputs, 6) == {false, true}
+
+  end
+
+  test "Part 1 challenge" do
+    answer =
+      Day2.load_inputs("main-input.txt")
+      |> Day2.part1()
+
+    assert answer == 8715
+  end
+
+end
