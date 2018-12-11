@@ -8,11 +8,11 @@ defmodule Day1Test do
 
   def event_tuple(tuple_input, index) do
     string_input = tuple_input |> elem(index)
-    {Day2.double_event(string_input), Day2.triple_event(string_input)}
+    {Day2.double_event?(string_input), Day2.triple_event?(string_input)}
   end
 
   test "Part 1 examples" do
-    test_inputs = Day2.load_inputs("test-input.txt") |> List.to_tuple()
+    test_inputs = Day2.load_inputs("test-input-1.txt") |> List.to_tuple()
 
     assert event_tuple(test_inputs, 0) == {false, false}
     assert event_tuple(test_inputs, 1) == {true, true}
@@ -30,6 +30,19 @@ defmodule Day1Test do
       |> Day2.part1()
 
     assert answer == 8715
+  end
+
+  test "one_mismatch?([1, 2, 3], [1, 4, 3])" do
+    assert Day2.one_mismatch?([1, 2, 3], [1, 4, 3])
+  end
+
+  @tag :pending
+  test "Part 2 examples" do
+    answer =
+      Day2.load_inputs("test-input-2.txt")
+      |> Day2.part2()
+
+    assert answer == {"fghij", "fguij"}
   end
 
 end
