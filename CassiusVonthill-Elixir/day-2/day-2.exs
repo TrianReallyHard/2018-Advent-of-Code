@@ -49,4 +49,20 @@ defmodule Day2 do
     |> (fn x -> x == 1 end).()
   end
 
+  def find_match_recur([], _input), do: {:missing, {}}
+
+  def find_match_recur([head | tail], input) do
+    case one_mismatch?(head, input) do
+      true -> {:found, {head, input}}
+      false ->  find_match_recur(tail, input)
+    end
+  end
+
+  def find_match(inputs, input) do
+    case find_match_recur(inputs, input) do
+      {:missing, _} -> 
+        
+    end
+  end
+
 end
