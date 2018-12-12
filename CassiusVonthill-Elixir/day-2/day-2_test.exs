@@ -48,13 +48,29 @@ defmodule Day1Test do
 
   end
 
-  @tag :pending
+  test "Recursing through list and finding matches" do
+    output = 
+      ["bbb", "ccc", "aaa", "aba"]
+      |> Enum.map(&String.split(&1, "", trim: true))
+      |> Day2.recur()
+
+    assert output == {["a", "a", "a"], ["a", "b", "a"]}
+  end
+
   test "Part 2 examples" do
     answer =
       Day2.load_inputs("test-input-2.txt")
       |> Day2.part2()
 
-    assert answer == {"fghij", "fguij"}
+    assert answer == "fgij"
+  end
+
+  test "Part 2 challenge" do
+    answer =
+      Day2.load_inputs("main-input.txt")
+      |> Day2.part2()
+
+    assert answer == "fvstwblgqkhpuixdrnevmaycd"
   end
 
 end

@@ -38,10 +38,20 @@ defmodule Day2 do
     string_input |> n_event?(3)
   end
 
-  # @spec part2([]) :: {String.t(), String.t()}
-  # def part2(input) do
-
-  # end
+  def part2(inputs) do
+    inputs
+    |> Enum.map(&String.split(&1, "", trim: true))
+    |> recur(inputs)
+    |> Tuple.to_list()
+    |> Enum.zip()
+    |> Enum.flat_map(fn {x, y} -> 
+      case x == y do
+        true -> [x]
+        _ -> []
+      end
+    end)
+    |> Enum.join("")
+  end
 
   def one_mismatch?(base_list, test_list) do
     Enum.zip(base_list, test_list)
@@ -49,19 +59,19 @@ defmodule Day2 do
     |> (fn x -> x == 1 end).()
   end
 
-  def find_match_recur([], _input), do: {:missing, {}}
-
-  def find_match_recur([head | tail], input) do
-    case one_mismatch?(head, input) do
-      true -> {:found, {head, input}}
-      false ->  find_match_recur(tail, input)
-    end
+  def find_match(inputs, input) do
+    inputs
+    |> Enum.find(false, &one_mismatch?(&1, input))
   end
 
-  def find_match(inputs, input) do
-    case find_match_recur(inputs, input) do
-      {:missing, _} -> 
-        
+  def recur([]), do: {}
+
+  def recur([head | tail]), do: recur(tail, head)
+
+  def recur(inputs, input) do
+    case Enum.find(inputs, nil, &one_mismatch?(&1, input)) do
+      nil -> recur(inputs)
+      result -> {input, result}  
     end
   end
 
