@@ -36,6 +36,18 @@ defmodule Day1Test do
     assert Day2.one_mismatch?([1, 2, 3], [1, 4, 3])
   end
 
+  test "matching inputs to input" do
+    inputs = ["aaa", "bbb", "ccc"] |> Enum.map(&String.split(&1, "", trim: true))
+    input = ["a", "b", "a"]
+
+    output = Enum.find(inputs, false, &Day2.one_mismatch?(&1, input))
+    assert output == ["a", "a", "a"]
+
+    output = Enum.find([["z", "z", "z"]], false, &Day2.one_mismatch?(&1, input))
+    assert output == false
+
+  end
+
   @tag :pending
   test "Part 2 examples" do
     answer =
