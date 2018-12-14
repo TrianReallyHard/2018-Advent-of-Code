@@ -6,7 +6,7 @@ import java.lang.*;
 class D3P1 {
 
     public static ArrayList<Integer[]> claims = new ArrayList<Integer[]>();
-    public static Set<Point> solution = new HashSet<Point>();
+    public static Set<Rectangle> solution = new HashSet<Rectangle>();
 
     public static void main(String[] args) {
         processClaims();
@@ -53,6 +53,12 @@ class D3P1 {
                 Rectangle rect2 = new Rectangle(left2, top2, width2, height2);
                 if(rect1.intersects(rect2)) {
                     Rectangle zone = rect1.union(rect2);
+                    zone.setLocation(0, 0);
+                    if(!solution.contains(zone)){
+                        solution.add(zone);
+                    } else {
+                        continue;
+                    }
                 }
             }
         }
