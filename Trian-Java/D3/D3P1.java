@@ -1,12 +1,14 @@
-import java.io.*;
-import java.util.*;
-import java.awt.*;
-import java.lang.*;
+import java.util.ArrayList;
+import java.util.Set;
+import java.awt.Rectangle;
+import java.util.HashSet;
+import java.io.File;
+import java.util.Scanner;
 
 class D3P1 {
 
     public static ArrayList<Integer[]> claims = new ArrayList<Integer[]>();
-    public static Set<Rectangle> solution = new HashSet<Rectangle>();
+    public static Set<Rectangle> rectSet = new HashSet<Rectangle>();
 
     public static void main(String[] args) {
         processClaims();
@@ -15,7 +17,7 @@ class D3P1 {
 
     public static void processClaims(){
         try {
-            File file = new File("D3Input.txt");
+            File file = new File("input.txt");
             Scanner scan = new Scanner(file);
             while (scan.hasNextLine()) {
                 String request = scan.nextLine();
@@ -38,6 +40,7 @@ class D3P1 {
     }
 
     public static void findOverlap(ArrayList<Integer[]> list) {
+        boolean add = true;
         Long timeStart = System.currentTimeMillis();
         for (int i = 0; i < list.size(); i++) {
             int left = list.get(i)[1];
@@ -51,18 +54,24 @@ class D3P1 {
                 int width2 = list.get(j)[3];
                 int height2 = list.get(j)[4];
                 Rectangle rect2 = new Rectangle(left2, top2, width2, height2);
-                if(rect1.intersects(rect2)) {
-                    Rectangle zone = rect1.union(rect2);
-                    zone.setLocation(0, 0);
-                    if(!solution.contains(zone)){
-                        solution.add(zone);
-                    } else {
-                        continue;
+                if(!rect1.intersection(rect2).isEmpty()) {
+                    Rectangle zone = rect1.intersection(rect2);
+                    if(rectSet.contains(zone)) {
+                        add = false;
+                    }
+                    if(add) {
+                        rectSet.add(zone);
                     }
                 }
             }
         }
         Long timeEnd = System.currentTimeMillis();
         Long timeTaken = timeEnd - timeStart;
+        System.out.println(rectSet.size());
+        int result = 0;
+        for (Rectangle rect : rectSet) {
+            result += (rect.width * rect.height);
+        }
+        System.out.println(result);
     }
 }
