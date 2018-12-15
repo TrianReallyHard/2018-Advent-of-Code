@@ -17,7 +17,7 @@ class D3P1 {
 
     public static void processClaims(){
         try {
-            File file = new File("input.txt");
+            File file = new File("testInput.txt");
             Scanner scan = new Scanner(file);
             while (scan.hasNextLine()) {
                 String request = scan.nextLine();
