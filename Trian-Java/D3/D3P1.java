@@ -17,7 +17,7 @@ class D3P1 {
 
     public static void processClaims(){
         try {
-            File file = new File("testInput.txt");
+            File file = new File("input.txt");
             Scanner scan = new Scanner(file);
             while (scan.hasNextLine()) {
                 String request = scan.nextLine();
@@ -41,7 +41,6 @@ class D3P1 {
 
     public static void findOverlap(ArrayList<Integer[]> list) {
         boolean add = true;
-        Long timeStart = System.currentTimeMillis();
         for (int i = 0; i < list.size(); i++) {
             int left = list.get(i)[1];
             int top = list.get(i)[2];
@@ -56,17 +55,21 @@ class D3P1 {
                 Rectangle rect2 = new Rectangle(left2, top2, width2, height2);
                 if(!rect1.intersection(rect2).isEmpty()) {
                     Rectangle zone = rect1.intersection(rect2);
-                    if(rectSet.contains(zone)) {
-                        add = false;
+                    for(Rectangle rect : rectSet) {
+                        if(rect.contains(zone)){
+                            add = false;
+                        }
+
+                        if(rect.equals(zone)) {
+                            add = false;
+                        }
                     }
-                    if(add) {
+                    if(add){
                         rectSet.add(zone);
                     }
                 }
             }
         }
-        Long timeEnd = System.currentTimeMillis();
-        Long timeTaken = timeEnd - timeStart;
         System.out.println(rectSet.size());
         int result = 0;
         for (Rectangle rect : rectSet) {
